@@ -43,7 +43,7 @@
       </a-light>
     </a-entity>
 
-    <a-entity id="scene3" visible="false" position="" rotation="" scale="">
+    <!-- <a-entity id="scene3" visible="false" position="" rotation="" scale="">
       <a-sky src="./Interiors_360/home01.jpg" rotation="0 -130 0"></a-sky>
       <a-text font="kelsonsans" value="loft apartment" width="6" position="" rotation=""></a-text>
       <a-text font="kelsonsans" value="...their habits, values and emotions" width="6" position="" rotation=""></a-text>
@@ -61,7 +61,7 @@
       <a-light id="ambient2" type="ambient" color="#FFFFFF" position="" rotation="" scale="" visible="" light="">
         <a-animation attribute="intensity" begin="aaa" from="0" to="1" delay="100" dur="1000" fill="both"></a-animation>
       </a-light>
-    </a-entity>
+    </a-entity> -->
 
      <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="889" height="878" style="width: 889px; height: 878px;"></canvas>
       <div class="a-enter-vr" aframe-injected=""><button class="a-enter-vr-button" aframe-injected=""></button></div>
@@ -69,21 +69,21 @@
    </a-scene>
 
   <script type="text/javascript">
-  function setScene4() {
-
-    document.getElementById('scene1').setAttribute('visible', 'false')
-    document.getElementById('scene2').setAttribute('visible', 'true')
-    document.getElementById('scene2').setAttribute('visible', 'true')
-
-  }
-
-
-  function setScene3() {
-
-    document.getElementById('scene1').setAttribute('visible', 'false')
-    document.getElementById('scene2').setAttribute('visible', 'true')
-
-  }
+  // function setScene4() {
+  //
+  //   document.getElementById('scene1').setAttribute('visible', 'false')
+  //   document.getElementById('scene2').setAttribute('visible', 'true')
+  //   document.getElementById('scene2').setAttribute('visible', 'true')
+  //
+  // }
+  //
+  //
+  // function setScene3() {
+  //
+  //   document.getElementById('scene1').setAttribute('visible', 'false')
+  //   document.getElementById('scene2').setAttribute('visible', 'true')
+  //
+  // }
 
   function setScene2() {
     // document.getElementById('scene1').emit('fade');
@@ -94,8 +94,8 @@
   function setScene1() {
 
     document.getElementById('scene2').setAttribute('visible', 'false')
-    document.getElementById('scene3').setAttribute('visible', 'false')
-    document.getElementById('scene4').setAttribute('visible', 'false')
+    // document.getElementById('scene3').setAttribute('visible', 'false')
+    // document.getElementById('scene4').setAttribute('visible', 'false')
     document.getElementById('scene1').setAttribute('visible', 'true')
 
   }
