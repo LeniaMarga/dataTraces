@@ -11,7 +11,7 @@
 </head>
 <body>
   <a-scene class="fullscreen" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
-    <a-entity camera="" position="2 0 3" look-controls="" wasd-controls="" rotation="" scale="" visible="">
+    <a-entity camera="" position="2 0 3" look-controls="" wasd-controls="" rotation="" scale="0.7 0.7 0.7" visible="">
       <a-entity cursor="fuse: true; fuseTimeout: 1000" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat" rotation="" scale="" visible="" raycaster="">
         <a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1"></a-animation>
         <a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" to="0.1 0.1 0.1"></a-animation>
@@ -19,9 +19,12 @@
     </a-entity>
 
     <a-entity id="scene1" position="" rotation="" scale="" visible="">
-      <a-sky src="./Interiors_360/artist_workshop.jpg" rotation="0 -130 0"></a-sky>
-      <a-text font="kelsonsans" value="old atelier" width="6" position="" rotation=""></a-text>
-      <a-sphere color="red" onclick="setScene2()" position="5 0 -5" rotation="" scale="" visible="" material="" geometry=""> </a-sphere>
+      <a-animation attribute="material.opacity" begin="fade" to="0"></a-animation>
+      <a-sky id='01' src="./Interiors_360/artist_workshop.jpg" rotation="0 -130 0">
+      </a-sky>
+      <a-text font="kelsonsans" value="old atelier, 1950" width="6" position="2" rotation=""></a-text>
+      <a-text font="kelsonsans" value="Our environments have the capacity to tell stories about our past through 'data-traces'" width="6" position="" rotation=""></a-text>
+      <a-sphere color="red" onclick="setScene2()" position="5 0 -5" rotation="" scale="0.7 0.7 0.7" visible="" material="" geometry=""> </a-sphere>
       <a-light id="ambient1" type="ambient" color="#4f6487" position="" rotation="" scale="" visible="" light="">
         <a-animation attribute="intensity" begin="aaa" from="0" to="1" delay="100" dur="1000" fill="both"></a-animation>
       </a-light>
@@ -30,9 +33,25 @@
     <a-entity id="scene2" visible="false" position="" rotation="" scale="">
       <a-sky src="./Interiors_360/photo_studio_01.jpg" rotation="0 -130 0"></a-sky>
       <a-text font="kelsonsans" value="loft apartment" width="6" position="" rotation=""></a-text>
-      <!-- <a-box color="green" position="0 2 -5" rotation="" scale="" visible="" material="" geometry=""> </a-box> -->
+      <a-sphere color="yellow" position="5 0 -5" onclick="setScene3()" rotation="" scale="" visible="" material="" geometry=""> </a-sphere>
+      <a-light id="ambient2" type="ambient" color="#FFFFFF" position="" rotation="" scale="" visible="" light="">
+        <a-animation attribute="intensity" begin="aaa" from="0" to="1" delay="100" dur="1000" fill="both"></a-animation>
+      </a-light>
+    </a-entity>
+
+    <a-entity id="scene3" visible="false" position="" rotation="" scale="">
+      <a-sky src="./Interiors_360/home01.jpg" rotation="0 -130 0"></a-sky>
+      <a-text font="kelsonsans" value="loft apartment" width="6" position="" rotation=""></a-text>
+      <a-sphere color="yellow" position="5 0 -5" onclick="setScene4()" rotation="" scale="" visible="" material="" geometry=""> </a-sphere>
+      <a-light id="ambient2" type="ambient" color="#FFFFFF" position="" rotation="" scale="" visible="" light="">
+        <a-animation attribute="intensity" begin="aaa" from="0" to="1" delay="100" dur="1000" fill="both"></a-animation>
+      </a-light>
+    </a-entity>
+
+    <a-entity id="scene4" visible="false" position="" rotation="" scale="">
+      <a-sky src="./Interiors_360/home02.jpg" rotation="0 -130 0"></a-sky>
+      <a-text font="kelsonsans" value="loft apartment" width="6" position="" rotation=""></a-text>
       <a-sphere color="yellow" position="5 0 -5" onclick="setScene1()" rotation="" scale="" visible="" material="" geometry=""> </a-sphere>
-      <!-- <a-box color="blue" position="0 0 -3" rotation="" scale="" visible="" material="" geometry=""> </a-box> -->
       <a-light id="ambient2" type="ambient" color="#FFFFFF" position="" rotation="" scale="" visible="" light="">
         <a-animation attribute="intensity" begin="aaa" from="0" to="1" delay="100" dur="1000" fill="both"></a-animation>
       </a-light>
@@ -44,17 +63,33 @@
    </a-scene>
 
   <script type="text/javascript">
-
-
-  function setScene2() {
+  function setScene4() {
 
     document.getElementById('scene1').setAttribute('visible', 'false')
+    document.getElementById('scene2').setAttribute('visible', 'true')
+    document.getElementById('scene2').setAttribute('visible', 'true')
+
+  }
+
+
+  function setScene3() {
+
+    document.getElementById('scene1').setAttribute('visible', 'false')
+    document.getElementById('scene2').setAttribute('visible', 'true')
+
+  }
+
+  function setScene2() {
+    document.getElementById('scene1').emit('fade');
+    // document.getElementById('scene1').setAttribute('visible', 'false')
     document.getElementById('scene2').setAttribute('visible', 'true')
 
   }
   function setScene1() {
 
     document.getElementById('scene2').setAttribute('visible', 'false')
+    document.getElementById('scene3').setAttribute('visible', 'false')
+    document.getElementById('scene4').setAttribute('visible', 'false')
     document.getElementById('scene1').setAttribute('visible', 'true')
 
   }
