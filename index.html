@@ -17,7 +17,9 @@
       </a-entity>
     </a-entity>
 
-    <a-entity id="scene1" position="" rotation="" scale="" visible="">
+    <a-entity id="scene1" position="" rotation="" scale="" visible=""
+           animation__fadein="startEvents: fadein; property: material.opacity; from: 0; to: 1; dur: 1000;"
+           animation__fadeout="startEvents: fadeout; property: material.opacity; from: 1; to: 0; dur: 1000;">
       <!-- <a-sky src="./Interiors_360/artist_workshop.jpg" rotation="0 -130 0" animation="property: components.material.material.opacity; from: 1; to: 0; dur:1000; ">
       </a-sky> -->
       <a-sky src="./Interiors_360/artist_workshop.jpg" rotation="0 -130 0">
@@ -69,18 +71,26 @@
   <script type="text/javascript">
   function setScene4() {
     document.getElementById('scene3').setAttribute('visible', 'false')
+    document.getElementById('scene1').setAttribute('visible', 'false')
+    document.getElementById('scene2').setAttribute('visible', 'false')
     document.getElementById('scene4').setAttribute('visible', 'true')
   }
   function setScene3() {
     document.getElementById('scene2').setAttribute('visible', 'false')
+    document.getElementById('scene1').setAttribute('visible', 'false')
+    document.getElementById('scene4').setAttribute('visible', 'false')
     document.getElementById('scene3').setAttribute('visible', 'true')
   }
   function setScene2() {
     document.getElementById('scene1').setAttribute('visible', 'false')
+    document.getElementById('scene3').setAttribute('visible', 'false')
+    document.getElementById('scene4').setAttribute('visible', 'false')
     document.getElementById('scene2').setAttribute('visible', 'true')
   }
   function setScene1() {
     document.getElementById('scene4').setAttribute('visible', 'false')
+    document.getElementById('scene3').setAttribute('visible', 'false')
+    document.getElementById('scene2').setAttribute('visible', 'false')
     document.getElementById('scene1').setAttribute('visible', 'true')
   }
   </script>
