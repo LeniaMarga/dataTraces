@@ -24,7 +24,10 @@
       </a-sky>
       <a-text font="kelsonsans" value="old atelier, 1950" width="6" position="2" rotation=""></a-text>
       <a-text font="kelsonsans" value="Our environments have the capacity to tell stories about our past through 'data-traces'" width="6" position="" rotation=""></a-text>
-      <a-sphere color="red" onclick="setScene2()" position="5 0 -5" rotation="" scale="0.7 0.7 0.7" visible="" material="" geometry=""> </a-sphere>
+      <a-text font="kelsonsans" value="This is a 360 experience of a space transforming in time..." width="6" position="" rotation=""></a-text>
+      <a-sphere color="red" onclick="setScene2()" position="5 0 -5" rotation="" scale="0.7 0.7 0.7" visible="" material="" geometry="">
+            <a-text font="kelsonsans" value="travel in time" width="3" position="" rotation=""></a-text>
+      </a-sphere>
       <a-light id="ambient1" type="ambient" color="#4f6487" position="" rotation="" scale="" visible="" light="">
         <a-animation attribute="intensity" begin="aaa" from="0" to="1" delay="100" dur="1000" fill="both"></a-animation>
       </a-light>
@@ -33,6 +36,7 @@
     <a-entity id="scene2" visible="false" position="" rotation="" scale="">
       <a-sky src="./Interiors_360/photo_studio_01.jpg" rotation="0 -130 0"></a-sky>
       <a-text font="kelsonsans" value="loft apartment" width="6" position="" rotation=""></a-text>
+      <a-text font="kelsonsans" value="...what knowledge can we acquire for the people inhibiting these spaces" width="6" position="" rotation=""></a-text>
       <a-sphere color="yellow" position="5 0 -5" onclick="setScene3()" rotation="" scale="" visible="" material="" geometry=""> </a-sphere>
       <a-light id="ambient2" type="ambient" color="#FFFFFF" position="" rotation="" scale="" visible="" light="">
         <a-animation attribute="intensity" begin="aaa" from="0" to="1" delay="100" dur="1000" fill="both"></a-animation>
@@ -42,6 +46,7 @@
     <a-entity id="scene3" visible="false" position="" rotation="" scale="">
       <a-sky src="./Interiors_360/home01.jpg" rotation="0 -130 0"></a-sky>
       <a-text font="kelsonsans" value="loft apartment" width="6" position="" rotation=""></a-text>
+      <a-text font="kelsonsans" value="...their habits, values and emotions" width="6" position="" rotation=""></a-text>
       <a-sphere color="yellow" position="5 0 -5" onclick="setScene4()" rotation="" scale="" visible="" material="" geometry=""> </a-sphere>
       <a-light id="ambient2" type="ambient" color="#FFFFFF" position="" rotation="" scale="" visible="" light="">
         <a-animation attribute="intensity" begin="aaa" from="0" to="1" delay="100" dur="1000" fill="both"></a-animation>
@@ -51,6 +56,7 @@
     <a-entity id="scene4" visible="false" position="" rotation="" scale="">
       <a-sky src="./Interiors_360/home02.jpg" rotation="0 -130 0"></a-sky>
       <a-text font="kelsonsans" value="loft apartment" width="6" position="" rotation=""></a-text>
+      <a-text font="kelsonsans" value="...leaving data-traces in space and time" width="6" position="" rotation=""></a-text>
       <a-sphere color="yellow" position="5 0 -5" onclick="setScene1()" rotation="" scale="" visible="" material="" geometry=""> </a-sphere>
       <a-light id="ambient2" type="ambient" color="#FFFFFF" position="" rotation="" scale="" visible="" light="">
         <a-animation attribute="intensity" begin="aaa" from="0" to="1" delay="100" dur="1000" fill="both"></a-animation>
