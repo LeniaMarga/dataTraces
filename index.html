@@ -5,8 +5,8 @@
   <meta aframe-injected="" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no,user-scalable=no,minimal-ui">
   <meta aframe-injected="" name="mobile-web-app-capable" content="yes">
   <meta aframe-injected="" name="theme-color" content="black">
-  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.js"></script> -->
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-animation-component@5.1.2/dist/aframe-animation-component.min.js"></script>
   <style type="text/css" data-href="src/style/aframe.css"></style>
 </head>
 <body>
@@ -19,7 +19,7 @@
     </a-entity>
 
     <a-entity id="scene1" position="" rotation="" scale="" visible="">
-      <a-sky src="./Interiors_360/artist_workshop.jpg" rotation="0 -130 0">
+      <a-sky src="./Interiors_360/artist_workshop.jpg" rotation="0 -130 0" animation="property: components.material.material.opacity; from: 1; to: 0, ">
       </a-sky>
       <a-text font="kelsonsans" value="old atelier, 1950" width="3" position="1 1 0.5" rotation=""></a-text>
       <a-text font="kelsonsans" value="Our environments have the capacity to tell stories about our past through 'data-traces'" width="5" position="1 1 1" rotation=""></a-text>
@@ -36,7 +36,27 @@
       <a-sky src="./Interiors_360/photo_studio_01.jpg" rotation="0 -130 0"></a-sky>
       <a-text font="kelsonsans" value="loft apartment" width="5" position="1 1 1.5" rotation=""></a-text>
       <a-text font="kelsonsans" value="...what knowledge can we acquire for the people inhibiting these spaces" width="5" position="1 1 1" rotation=""></a-text>
-      <a-sphere class="hotspot" color="yellow" position="2 0 -5" onclick="setScene1()" rotation="" scale="" visible="" material="" geometry=""> </a-sphere>
+      <a-sphere class="hotspot" color="yellow" position="-5 0 -5" onclick="setScene3()" rotation="" scale="" visible="" material="" geometry=""> </a-sphere>
+      <a-light id="ambient2" type="ambient" color="#FFFFFF" position="" rotation="" scale="" visible="" light="">
+        <a-animation attribute="intensity" begin="aaa" from="0" to="1" delay="100" dur="1000" fill="both"></a-animation>
+      </a-light>
+    </a-entity>
+
+    <a-entity id="scene3" visible="false" position="" rotation="" scale="">
+      <a-sky src="./Interiors_360/home01.jpg" rotation="0 -130 0"></a-sky>
+      <a-text font="kelsonsans" value="loft apartment" width="6" position="" rotation=""></a-text>
+      <a-text font="kelsonsans" value="...their habits, values and emotions" width="6" position="" rotation=""></a-text>
+      <a-sphere class="hotspot" color="yellow" position="2 0 -5" onclick="setScene4()" rotation="" scale="" visible="" material="" geometry=""> </a-sphere>
+      <a-light id="ambient2" type="ambient" color="#FFFFFF" position="" rotation="" scale="" visible="" light="">
+      <a-animation attribute="intensity" begin="aaa" from="0" to="1" delay="100" dur="1000" fill="both"></a-animation>
+      </a-light>
+    </a-entity>
+
+    <a-entity id="scene4" visible="false" position="" rotation="" scale="">
+      <a-sky src="./Interiors_360/home02.jpg" rotation="0 -130 0"></a-sky>
+      <a-text font="kelsonsans" value="loft apartment" width="6" position="" rotation=""></a-text>
+      <a-text font="kelsonsans" value="...leaving data-traces in space and time" width="6" position="" rotation=""></a-text>
+      <a-sphere  class="hotspot" color="yellow" position="5 0 -5" onclick="setScene1()" rotation="" scale="" visible="" material="" geometry=""> </a-sphere>
       <a-light id="ambient2" type="ambient" color="#FFFFFF" position="" rotation="" scale="" visible="" light="">
         <a-animation attribute="intensity" begin="aaa" from="0" to="1" delay="100" dur="1000" fill="both"></a-animation>
       </a-light>
@@ -46,11 +66,17 @@
    </a-scene>
 
   <script type="text/javascript">
-
+  function setScene4() {
+    document.getElementById('scene3').setAttribute('visible', 'false')
+    document.getElementById('scene4').setAttribute('visible', 'true')
+  }
+  function setScene3() {
+    document.getElementById('scene2').setAttribute('visible', 'false')
+    document.getElementById('scene3').setAttribute('visible', 'true')
+  }
   function setScene2() {
     document.getElementById('scene1').setAttribute('visible', 'false')
     document.getElementById('scene2').setAttribute('visible', 'true')
-
   }
   function setScene1() {
     document.getElementById('scene2').setAttribute('visible', 'false')

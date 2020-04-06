@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/LeniaMarga/dataTraces/issues"
   },
-  "homepage": "https://github.com/LeniaMarga/dataTraces#readme"
+  "homepage": "https://github.com/LeniaMarga/dataTraces#readme",
+  "dependencies": {
+    "aframe-animation-component": "^5.1.2"
+  }
 }
