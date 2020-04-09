@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/LeniaMarga/dataTraces#readme",
   "dependencies": {
-    "aframe-animation-component": "^5.1.2"
+    "aframe-animation-component": "^5.1.2",
+    "deepstream.io-client-js": "^2.3.4"
   }
 }
