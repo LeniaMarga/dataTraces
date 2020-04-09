@@ -31,11 +31,12 @@
       <a-sphere class="hotspot" color="yellow" onclick="setScene2()" position="5 0 -5" rotation="" scale="" visible="" material="" geometry="">
       </a-sphere>
 
-<!-- BEGIN INPUTS/KEYBOARD -->
-<a-keyboard></a-keyboard>
-<a-input position="-0.7 1 -2.5" placeholder="Username" color="black" width="1"></a-input>
-<a-input position="-0.7 0.8 -2.5" type="password" placeholder="Password" color="black" width="1"></a-input>
-<!-- END INPUTS/KEYBOARD -->
+      <!-- BEGIN INPUTS/KEYBOARD -->
+        <a-entity laser-controls="hand: right"></a-entity>
+        <a-keyboard></a-keyboard>
+        <a-input position="0 1 2.5" placeholder="Username" color="black" width="3"></a-input>
+        <a-input position="0 0.8 2.5" type="password" placeholder="Password" color="black" width="3"></a-input>
+        <!-- END INPUTS/KEYBOARD -->
 
       <a-light id="ambient1" type="ambient" color="#4f6487" position="" rotation="" scale="" visible="" light="">
         <a-animation attribute="intensity" begin="aaa" from="0" to="1" delay="100" dur="1000" fill="both"></a-animation>
