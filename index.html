@@ -6,7 +6,7 @@
   <meta aframe-injected="" name="mobile-web-app-capable" content="yes">
   <meta aframe-injected="" name="theme-color" content="black">
   <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
-
+  <script src="./aframe-keyboard.min.js"></script>
   <style type="text/css" data-href="src/style/aframe.css"></style>
 </head>
 <body>
@@ -28,7 +28,14 @@
       </a-sphere>
 
       <!-- BEGIN INPUTS/KEYBOARD -->
-      
+      <!-- keyboard -->
+      <a-text id="input" font="dejavu" color="#000" value="Input value..." scale="3 3 3" position="-0.2 2 -1"></a-text>
+      <a-entity
+          id="keyboard"
+          position="-2 1.6 1"
+          a-keyboard
+      >
+      </a-entity>
         <!-- END INPUTS/KEYBOARD -->
 
       <a-light id="ambient1" type="ambient" color="#4f6487" position="" rotation="" scale="" visible="" light="">
