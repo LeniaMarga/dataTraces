@@ -5,8 +5,12 @@
   <meta aframe-injected="" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no,user-scalable=no,minimal-ui">
   <meta aframe-injected="" name="mobile-web-app-capable" content="yes">
   <meta aframe-injected="" name="theme-color" content="black">
-  <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
-
+  <!-- <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> -->
+  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/etiennepinchon/aframe-material/master/dist/aframe-material.min.js"></script>
+  <script type="text/javascript">
+    AFRAME.ASSETS_PATH = "./assets";
+  </script>
   <style type="text/css" data-href="src/style/aframe.css"></style>
 </head>
 <body>
@@ -28,7 +32,9 @@
       </a-sphere>
 
       <!-- BEGIN INPUTS/KEYBOARD -->
-      
+        <a-keyboard class='keyboard' physical-keyboard="true" scale="3 3 3" ></a-keyboard>
+        <a-input class='textbox' position="0 1 -1.5" placeholder="leave a note" color="black" scale="3 3 3" ></a-input>
+        <a-input position="0 2 -1.5" rotation="0 90 0" placeholder="leave a note" color="black" scale="3 3 3"></a-input>
         <!-- END INPUTS/KEYBOARD -->
 
       <a-light id="ambient1" type="ambient" color="#4f6487" position="" rotation="" scale="" visible="" light="">
