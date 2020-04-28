@@ -2,6 +2,38 @@
 <html class="a-html">
 <head>
   <title>data traces</title>
+  <style>
+  body {
+  color: #333;
+  font: 16px/1 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.list-numbered {
+  list-style: none;
+  margin-left: 1em;
+  counter-reset: line;
+}
+
+.list-numbered > li {
+  position: relative;
+  margin-bottom: 1.5em;
+}
+
+.list-numbered > li:before {
+	position: absolute;
+	left: -2.25em;
+	display: inline-block;
+  width: 22px;
+	height: 22px;
+	margin-right: 0.5em;
+  background-color: #B53C2C;
+	border-radius: 50%;
+	color: #fff;
+	text-align:center;
+  line-height: 1.25em;
+	counter-increment: line;
+	content: counter(line);
+}</style>
 </head>
 <body>
   <iframe src="https://docs.google.com/document/d/e/2PACX-1vTy8o0i1ueO24EI72v-NyIv9caNZwKXLcX88hWV6l3F_6S69W5sZJRuL-jodwlOPWmy0qz4Ir8AQMsI/pub?embedded=true"></iframe>
