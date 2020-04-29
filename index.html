@@ -28,7 +28,7 @@
 .list-numbered {
   list-style: none;
   margin-left: 1em;
-  counter-reset: my-sec-counter;
+  counter-reset: line;
 }
 
 .list-numbered > li {
@@ -48,8 +48,8 @@
 	color: #fff;
 	text-align:center;
   line-height: 1.25em;
-	counter-increment: my-sec-counter;
-	content: counter(my-sec-counter);
+	counter-increment: line;
+	content: counter(line);
 }
 </style>
 </head>
